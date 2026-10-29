@@ -1,0 +1,999 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Milan 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&family=Rozha+One&family=Unbounded:wght@500;800&display=swap">
+<style>
+  /* Layout: dark particle-type hero over a light poster-ink body. Hard-edged cards with offset shadows, saffron festival band for perks, one dark footer. */
+  :root {
+    --bg: #EEF0F8;
+    --surface: #FFFFFF;
+    --surface-2: #E1E5F4;
+    --fg: #14123A;
+    --muted: #55587C;
+    --line: #C3C9E3;
+    --edge: #14123A;
+    --shadow: #14123A;
+    --accent: #D6007A;
+    --on-accent: #FFFFFF;
+    --saffron: #FF9F1C;
+    --teal: #00796F;
+    --violet: #5B3FF0;
+    --hero: #0E0C2B;
+    --hero-fg: #F2F0FF;
+    --hero-muted: #A9A7D0;
+    --hero-line: #2E2A68;
+    --band: #FFB23F;
+    --band-ink: #14123A;
+    --band-card: #FFF3D6;
+    --c-music: #C26F00;
+    --c-dance: #D6007A;
+    --c-theatre: #00796F;
+    --c-words: #5B3FF0;
+    --c-visual: #1F6FD0;
+    --c-play: #4F8A0A;
+    --disp: "Unbounded", "Arial Black", Impact, system-ui, sans-serif;
+    --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+    --deva: "Rozha One", "Noto Serif Devanagari", serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0B0A22; --surface: #16133F; --surface-2: #1D1A50; --fg: #F2F0FF; --muted: #A9A7D0; --line: #2E2A68;
+      --edge: #6C66DD; --shadow: #3A34A6; --accent: #FF4DAA; --on-accent: #1A0630; --teal: #2FD6C4; --violet: #9A86FF;
+      --c-music: #FFB020; --c-dance: #FF4DAA; --c-theatre: #2FD6C4; --c-words: #9A86FF; --c-visual: #5AA8FF; --c-play: #9AD93C;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0B0A22; --surface: #16133F; --surface-2: #1D1A50; --fg: #F2F0FF; --muted: #A9A7D0; --line: #2E2A68;
+    --edge: #6C66DD; --shadow: #3A34A6; --accent: #FF4DAA; --on-accent: #1A0630; --teal: #2FD6C4; --violet: #9A86FF;
+    --c-music: #FFB020; --c-dance: #FF4DAA; --c-theatre: #2FD6C4; --c-words: #9A86FF; --c-visual: #5AA8FF; --c-play: #9AD93C;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); }
+  h1, h2, h3, h4, p { margin: 0; }
+  h1, h2, h3 { text-wrap: balance; }
+  a { color: inherit; }
+  button { font: inherit; color: inherit; cursor: pointer; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .wrap { width: 100%; max-width: 1280px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+  /* buttons + chips */
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: var(--accent); color: var(--on-accent); border: 2px solid var(--edge); border-radius: 4px; font-weight: 800; font-size: 14px; text-decoration: none; box-shadow: 3px 3px 0 var(--shadow); transition: transform .12s, box-shadow .12s; white-space: nowrap; }
+  .btn:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--shadow); }
+  .btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--shadow); }
+  .btn.ghost { background: var(--surface); color: var(--fg); }
+  .btn.saffron { background: var(--saffron); color: #14123A; }
+  .btn b { font-family: var(--mono); font-weight: 500; background: var(--fg); color: var(--bg); padding: 0 7px; border-radius: 3px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { padding: 6px 12px; border: 2px solid var(--edge); background: var(--surface); border-radius: 999px; font-size: 13px; font-weight: 700; }
+  .chip[aria-pressed="true"], .chip[aria-selected="true"] { background: var(--fg); color: var(--bg); }
+  .chip i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; background: var(--cc, var(--muted)); }
+
+  /* header */
+  .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); border-bottom: 2px solid var(--edge); }
+  .top .wrap { display: flex; align-items: center; gap: 16px; height: 64px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--disp); font-weight: 800; font-size: 18px; letter-spacing: -0.01em; flex: none; }
+  .logo svg { width: 28px; height: 28px; }
+  .nav { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { padding: 8px 12px; text-decoration: none; font-weight: 700; font-size: 14px; border-radius: 4px; white-space: nowrap; }
+  .nav a:hover { background: var(--surface-2); }
+  .top .actions { display: flex; gap: 10px; flex: none; }
+
+  /* hero */
+  .hero { background: var(--hero); color: var(--hero-fg); position: relative; overflow: hidden; }
+  .hero .wrap { padding-top: 28px; padding-bottom: 40px; }
+  .hero-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--hero-muted); }
+  .hero-meta span:first-child { color: var(--saffron); }
+  #heroCv { display: block; width: 100%; height: clamp(190px, 32vw, 400px); margin-top: 12px; touch-action: pan-y; }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px 48px; align-items: end; margin-top: 12px; }
+  .hero h1 { font-family: var(--disp); font-weight: 800; font-size: clamp(24px, 3.4vw, 40px); line-height: 1.12; letter-spacing: -0.02em; }
+  .hero h1 em { font-style: normal; color: var(--saffron); }
+  .hero .sub { margin-top: 14px; color: var(--hero-muted); max-width: 54ch; }
+  .hero .sub .deva { font-family: var(--deva); color: var(--hero-fg); font-size: 1.15em; }
+  .hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+  .hero .btn { --shadow: #FF9F1C; border-color: #F2F0FF; }
+  .hero .btn.ghost { background: transparent; color: var(--hero-fg); }
+  .count { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+  .count div { border: 2px solid var(--hero-line); padding: 12px 8px 10px; text-align: center; border-radius: 4px; }
+  .count b { display: block; font-family: var(--disp); font-weight: 800; font-size: clamp(24px, 3.6vw, 40px); font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .count small { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--hero-muted); }
+  .count-cap { margin-top: 10px; font-family: var(--mono); font-size: 12px; color: var(--hero-muted); }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; margin-top: 36px; border-top: 2px solid var(--hero-line); }
+  .stats div { padding: 16px 16px 0 0; }
+  .stats b { display: block; font-family: var(--disp); font-weight: 800; font-size: clamp(20px, 2.4vw, 28px); font-variant-numeric: tabular-nums; }
+  .stats span { font-size: 13px; color: var(--hero-muted); }
+
+  .marquee { background: var(--saffron); color: #14123A; border-bottom: 2px solid var(--edge); overflow: hidden; }
+  .marquee .track { display: flex; width: max-content; gap: 0; animation: slide 46s linear infinite; font-family: var(--disp); font-weight: 800; font-size: 15px; text-transform: uppercase; letter-spacing: 0.04em; padding: 12px 0; }
+  .marquee span { padding: 0 22px; white-space: nowrap; }
+  .marquee span::after { content: "✦"; margin-left: 44px; }
+  @keyframes slide { to { transform: translateX(-50%); } }
+
+  /* sections */
+  .sec { padding-block: 80px; }
+  .sec.alt { background: var(--surface-2); }
+  .sec-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 32px; margin-bottom: 32px; }
+  .sec-head h2 { font-family: var(--disp); font-weight: 800; font-size: clamp(28px, 5vw, 52px); line-height: 1.05; letter-spacing: -0.03em; }
+  .sec-head p { max-width: 46ch; color: var(--muted); }
+  .eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; display: block; }
+  .filters { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+  .filters .row { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
+  .search { flex: 1 1 220px; min-width: 0; padding: 9px 12px; border: 2px solid var(--edge); border-radius: 4px; background: var(--surface); color: var(--fg); font: inherit; }
+  .count-line { font-family: var(--mono); font-size: 13px; color: var(--muted); }
+
+  /* event cards */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr)); gap: 22px; }
+  .ev { display: flex; flex-direction: column; gap: 12px; padding: 18px; background: var(--surface); border: 2px solid var(--edge); border-radius: 4px; box-shadow: 5px 5px 0 var(--shadow); min-width: 0; }
+  .ev-top { display: flex; justify-content: space-between; gap: 10px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  .cat { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; color: var(--cc); text-transform: uppercase; letter-spacing: 0.06em; }
+  .cat i { width: 9px; height: 9px; border-radius: 50%; background: var(--cc); }
+  .ev h3 { font-family: var(--disp); font-weight: 800; font-size: 21px; line-height: 1.15; letter-spacing: -0.02em; }
+  .ev p { color: var(--muted); font-size: 15px; }
+  .ev-meta { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: auto 0 0; padding-top: 12px; border-top: 1px dashed var(--line); }
+  .ev-meta dt { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+  .ev-meta dd { margin: 2px 0 0; font-weight: 700; font-size: 14px; }
+  .plan-btn { padding: 8px 12px; border: 2px solid var(--edge); border-radius: 4px; background: var(--surface); font-weight: 800; font-size: 13px; }
+  .plan-btn:hover { background: var(--surface-2); }
+  .plan-btn[aria-pressed="true"] { background: var(--teal); color: #fff; border-color: var(--teal); }
+  :root[data-theme="dark"] .plan-btn[aria-pressed="true"] { color: #05221F; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .plan-btn[aria-pressed="true"] { color: #05221F; } }
+  .empty { padding: 28px; border: 2px dashed var(--line); border-radius: 4px; color: var(--muted); grid-column: 1 / -1; }
+
+  /* pro nights */
+  .shows { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 22px; }
+  .show { border: 2px solid var(--edge); border-radius: 4px; overflow: hidden; background: var(--hero); color: var(--hero-fg); box-shadow: 5px 5px 0 var(--shadow); display: flex; flex-direction: column; min-width: 0; }
+  .show .art { height: 150px; position: relative; display: flex; align-items: flex-end; padding: 10px 14px; }
+  .show .art b { font-family: var(--disp); font-weight: 800; font-size: 64px; line-height: 0.9; color: transparent; -webkit-text-stroke: 2px #14123A; }
+  .show .art span { position: absolute; top: 12px; right: 14px; font-family: var(--mono); font-size: 12px; background: #14123A; color: #fff; padding: 3px 8px; border-radius: 3px; }
+  .show .body { padding: 16px 16px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .show h3 { font-family: var(--disp); font-weight: 800; font-size: 20px; line-height: 1.15; letter-spacing: -0.02em; }
+  .show .genre { font-family: var(--mono); font-size: 12px; color: var(--saffron); text-transform: uppercase; letter-spacing: 0.08em; }
+  .show p { color: var(--hero-muted); font-size: 14px; }
+  .show .plan-btn { margin-top: auto; align-self: flex-start; background: transparent; border-color: var(--hero-fg); color: var(--hero-fg); }
+  .show .plan-btn:hover { background: var(--hero-line); }
+
+  /* itinerary */
+  .it-bar { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+  .switch { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; cursor: pointer; }
+  .switch input { width: 20px; height: 20px; accent-color: var(--accent); }
+  .it-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+  .tl { list-style: none; margin: 0; padding: 0; border: 2px solid var(--edge); border-radius: 4px; background: var(--surface); box-shadow: 5px 5px 0 var(--shadow); }
+  .tl-row { display: grid; grid-template-columns: 96px minmax(0, 1fr) auto; gap: 14px; padding: 14px 16px; border-top: 1px solid var(--line); align-items: start; }
+  .tl-row:first-child { border-top: 0; }
+  .tl-time { font-family: var(--mono); font-size: 13px; font-weight: 500; line-height: 1.3; }
+  .tl-time small { display: block; color: var(--muted); font-size: 11px; }
+  .tl-main { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .tl-kind { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--cc, var(--muted)); }
+  .tl-main strong { font-size: 16px; }
+  .tl-venue { color: var(--muted); font-size: 14px; }
+  .tl-row.kind-show { background: var(--hero); color: var(--hero-fg); }
+  .tl-row.kind-show .tl-time small, .tl-row.kind-show .tl-venue { color: var(--hero-muted); }
+  .tl-row.kind-show .tl-kind { color: var(--saffron); }
+  .tl-row.kind-show .plan-btn { background: transparent; border-color: var(--hero-fg); color: var(--hero-fg); }
+  .tl-row.kind-extra .tl-main strong { font-weight: 500; }
+  .clash { display: inline-block; align-self: flex-start; margin-top: 6px; padding: 2px 8px; font-size: 12px; font-weight: 800; background: var(--accent); color: var(--on-accent); border-radius: 3px; }
+  .side { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+  .panel { padding: 18px; border: 2px solid var(--edge); border-radius: 4px; background: var(--surface); box-shadow: 5px 5px 0 var(--shadow); }
+  .panel h3 { font-family: var(--disp); font-weight: 800; font-size: 18px; letter-spacing: -0.02em; margin-bottom: 6px; }
+  .panel .small { color: var(--muted); font-size: 14px; }
+  .map-wrap { margin-top: 12px; }
+  .map-wrap svg { width: 100%; height: auto; display: block; }
+  .vn rect { fill: var(--surface-2); stroke: var(--edge); stroke-width: 2; }
+  .vn text { fill: var(--fg); font-family: var(--body); font-weight: 700; font-size: 13px; text-anchor: middle; pointer-events: none; }
+  .vn .n { font-family: var(--mono); font-weight: 500; font-size: 11px; fill: var(--muted); }
+  .vn { cursor: pointer; }
+  .vn:hover rect { fill: var(--line); }
+  .vn.sel rect { fill: var(--accent); }
+  .vn.sel text, .vn.sel .n { fill: var(--on-accent); }
+  .road { fill: none; stroke: var(--line); stroke-width: 3; stroke-dasharray: 2 8; stroke-linecap: round; }
+  .vlist { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
+  .vlist li { display: flex; justify-content: space-between; gap: 12px; padding-top: 8px; border-top: 1px dashed var(--line); }
+  .vlist span { color: var(--muted); font-family: var(--mono); font-size: 12px; white-space: nowrap; }
+
+  /* leaderboard */
+  .lb-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+  .live { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  .live i { width: 9px; height: 9px; border-radius: 50%; background: var(--teal); animation: pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 50% { opacity: .25; } }
+  .lb-box { border: 2px solid var(--edge); border-radius: 4px; background: var(--surface); box-shadow: 5px 5px 0 var(--shadow); }
+  .lb-head, .lb-row { display: grid; grid-template-columns: 44px minmax(0, 1fr) 88px 54px; gap: 12px; align-items: center; padding: 12px 16px; }
+  .lb-head { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); border-bottom: 2px solid var(--edge); }
+  .lb-list { list-style: none; margin: 0; padding: 0; }
+  .lb-row { border-top: 1px solid var(--line); position: relative; background: var(--surface); }
+  .lb-row:first-child { border-top: 0; }
+  .lb-row .rk { font-family: var(--disp); font-weight: 800; font-size: 20px; font-variant-numeric: tabular-nums; }
+  .lb-row:nth-child(1) .rk { color: var(--c-music); }
+  .lb-row .who { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+  .lb-row .who strong { font-size: 15px; line-height: 1.25; }
+  .lb-row .who small { color: var(--muted); font-size: 13px; }
+  .bar { display: block; height: 6px; background: var(--surface-2); border-radius: 3px; margin-top: 4px; overflow: hidden; }
+  .bar i { display: block; height: 100%; background: var(--accent); width: 0; transition: width .6s; }
+  .lb-row .val { text-align: right; font-variant-numeric: tabular-nums; }
+  .lb-row .val b { font-family: var(--disp); font-weight: 800; font-size: 18px; }
+  .mv { font-family: var(--mono); font-size: 12px; font-weight: 500; text-align: right; color: var(--muted); }
+  .mv.up { color: var(--teal); }
+  .mv.down { color: var(--accent); }
+  .flash { animation: flash 1.2s ease-out; }
+  @keyframes flash { 0% { background: color-mix(in srgb, var(--saffron) 55%, var(--surface)); } 100% { background: var(--surface); } }
+  .ind-row { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 12px 16px; border-top: 1px solid var(--line); }
+  .ind-row:first-child { border-top: 0; }
+  .ind-row .rk { font-family: var(--disp); font-weight: 800; font-size: 20px; }
+  .ind-row small { display: block; color: var(--muted); font-size: 13px; }
+  .ind-row b { font-family: var(--disp); font-weight: 800; font-size: 18px; text-align: right; display: block; }
+  .medal { display: inline-block; margin-top: 4px; padding: 1px 8px; font-size: 12px; font-weight: 800; border: 2px solid var(--edge); border-radius: 999px; }
+
+  /* perks */
+  .band { background: var(--band); color: var(--band-ink); border-block: 2px solid var(--edge); }
+  .band .sec-head p, .band .eyebrow { color: var(--band-ink); }
+  .passes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 22px; margin-bottom: 40px; }
+  .pass { position: relative; padding: 22px; background: var(--band-card); border: 2px solid var(--band-ink); border-radius: 4px; box-shadow: 5px 5px 0 var(--band-ink); display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  .pass.pop { background: #14123A; color: #F2F0FF; }
+  .pass .tag { position: absolute; top: -13px; right: 14px; background: var(--accent); color: var(--on-accent); font-family: var(--mono); font-size: 12px; padding: 3px 10px; border: 2px solid var(--band-ink); border-radius: 3px; }
+  .pass h3 { font-family: var(--disp); font-weight: 800; font-size: 20px; letter-spacing: -0.02em; }
+  .pass .price { font-family: var(--disp); font-weight: 800; font-size: 38px; letter-spacing: -0.03em; }
+  .pass ul { margin: 0; padding-left: 18px; font-size: 15px; display: flex; flex-direction: column; gap: 4px; }
+  .ladder { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 32px; background: #14123A; color: #F2F0FF; border: 2px solid var(--band-ink); border-radius: 4px; padding: 28px; box-shadow: 5px 5px 0 var(--band-ink); }
+  .ladder h3 { font-family: var(--disp); font-weight: 800; font-size: clamp(22px, 3vw, 30px); line-height: 1.1; letter-spacing: -0.02em; }
+  .ladder .big { font-family: var(--disp); font-weight: 800; font-size: 72px; line-height: 1; color: #FF9F1C; font-variant-numeric: tabular-nums; margin: 14px 0 4px; }
+  .ladder input[type="range"] { width: 100%; accent-color: #FF9F1C; margin: 8px 0 4px; }
+  .ladder .ticks { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 12px; color: #A9A7D0; }
+  .ladder .fin { margin-top: 18px; padding-top: 14px; border-top: 1px dashed #2E2A68; font-size: 14px; color: #A9A7D0; }
+  .perk-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  .perk-list li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; align-items: center; padding: 10px 12px; border: 2px solid #2E2A68; border-radius: 4px; color: #A9A7D0; transition: all .25s; }
+  .perk-list li span { width: 28px; height: 28px; border-radius: 50%; border: 2px solid #2E2A68; display: grid; place-items: center; font-family: var(--mono); font-size: 12px; }
+  .perk-list li.on { border-color: #FF9F1C; color: #F2F0FF; background: rgba(255, 159, 28, .1); }
+  .perk-list li.on span { background: #FF9F1C; border-color: #FF9F1C; color: #14123A; font-weight: 500; }
+
+  /* volunteers */
+  .vol-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+  .vol-stat { display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: baseline; margin-bottom: 14px; }
+  .vol-stat b { font-family: var(--disp); font-weight: 800; font-size: 44px; font-variant-numeric: tabular-nums; }
+  .roles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 14px; margin-top: 18px; }
+  .role { text-align: left; padding: 14px; border: 2px solid var(--edge); border-radius: 4px; background: var(--surface); display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .role[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+  .role strong { font-size: 16px; }
+  .role span { font-size: 14px; color: var(--muted); }
+  .role[aria-pressed="true"] span { color: var(--bg); opacity: .8; }
+  .role .bar { background: var(--line); }
+  .role .bar i { background: var(--saffron); }
+  .role small { font-family: var(--mono); font-size: 12px; }
+  .vperks { margin: 22px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px 18px; font-size: 15px; }
+  .vperks li::before { content: "→"; margin-right: 8px; color: var(--accent); font-weight: 800; }
+  form.panel { display: flex; flex-direction: column; gap: 14px; }
+  form label { display: flex; flex-direction: column; gap: 4px; font-weight: 700; font-size: 14px; min-width: 0; }
+  form input, form select, form textarea { padding: 10px 12px; border: 2px solid var(--edge); border-radius: 4px; background: var(--bg); color: var(--fg); font: inherit; font-weight: 400; width: 100%; min-width: 0; }
+  form .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .done { padding: 14px; border: 2px solid var(--teal); border-radius: 4px; background: color-mix(in srgb, var(--teal) 12%, var(--surface)); font-size: 15px; }
+
+  /* sponsors */
+  .tier { margin-bottom: 36px; }
+  .tier h3 { font-family: var(--mono); font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 12px; }
+  .logos { display: grid; gap: 14px; }
+  .logos.t1 { grid-template-columns: 1fr; }
+  .logos.t2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+  .logos.t3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); }
+  .logos.t4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr)); }
+  .lg { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 24px 12px; border: 2px solid var(--edge); border-radius: 4px; background: var(--surface); min-width: 0; text-align: center; }
+  .t1 .lg { padding: 44px 12px; font-size: 38px; box-shadow: 5px 5px 0 var(--shadow); }
+  .t2 .lg { font-size: 22px; }
+  .t3 .lg { font-size: 17px; padding: 18px 10px; }
+  .t4 .lg { font-size: 14px; padding: 14px 8px; border-style: dashed; }
+  .lg svg { width: 1.3em; height: 1.3em; flex: none; fill: var(--accent); }
+  .w1 { font-family: var(--disp); font-weight: 800; letter-spacing: -0.04em; }
+  .w2 { font-family: var(--deva); letter-spacing: 0.01em; }
+  .w3 { font-family: var(--mono); font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; }
+  .w4 { font-family: var(--body); font-weight: 800; font-style: italic; letter-spacing: -0.02em; }
+  .w5 { font-family: var(--disp); font-weight: 500; text-transform: lowercase; }
+  .w6 { font-family: var(--body); font-weight: 400; letter-spacing: 0.3em; text-transform: uppercase; }
+  .cta-sp { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; padding: 22px; border: 2px solid var(--edge); border-radius: 4px; background: var(--surface); box-shadow: 5px 5px 0 var(--shadow); }
+  .cta-sp p { flex: 1 1 280px; }
+  .cta-sp code { font-family: var(--mono); font-size: 14px; padding: 6px 10px; background: var(--surface-2); border-radius: 3px; user-select: all; }
+
+  /* faq */
+  .faq { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 14px 28px; }
+  details { border: 2px solid var(--edge); border-radius: 4px; background: var(--surface); padding: 0; }
+  summary { padding: 14px 16px; font-weight: 800; cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-family: var(--mono); }
+  details[open] summary::after { content: "–"; }
+  details p { padding: 0 16px 16px; color: var(--muted); }
+
+  footer { background: var(--hero); color: var(--hero-fg); }
+  footer .wrap { padding-top: 64px; padding-bottom: 48px; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 32px; }
+  footer h2 { font-family: var(--disp); font-weight: 800; font-size: clamp(28px, 5vw, 56px); line-height: 1.05; letter-spacing: -0.03em; }
+  footer h2 em { font-style: normal; color: var(--saffron); }
+  footer p, footer li { color: var(--hero-muted); font-size: 15px; }
+  footer ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+  footer a { color: var(--hero-fg); }
+  footer .fine { grid-column: 1 / -1; padding-top: 24px; border-top: 1px solid var(--hero-line); font-family: var(--mono); font-size: 12px; }
+
+  @media (max-width: 980px) {
+    .it-grid, .vol-grid, .ladder, footer .wrap, .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .sec { padding-block: 56px; }
+    .top .actions .btn.ghost { display: none; }
+    .tl-row { grid-template-columns: 74px minmax(0, 1fr); }
+    .tl-row .plan-btn { grid-column: 2; justify-self: start; }
+    .lb-head, .lb-row { grid-template-columns: 34px minmax(0, 1fr) 74px 40px; gap: 8px; padding-left: 12px; padding-right: 12px; }
+    .ladder { padding: 18px; }
+    form .two { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .marquee .track, .live i { animation: none; }
+    .flash { animation: none; }
+  }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Milan 2026, back to top">
+      <svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12.5" fill="none" stroke="currentColor" stroke-width="2"/><path fill="var(--accent)" d="M14 5l2.2 6.3 6.3 2.2-6.3 2.2L14 22l-2.2-6.3L5.5 13.5l6.3-2.2z"/></svg>
+      <span>MILAN&rsquo;26</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#events">Events</a><a href="#itinerary">Itinerary</a><a href="#leaderboard">Leaderboard</a><a href="#perks">Perks</a><a href="#volunteers">Volunteers</a><a href="#sponsors">Sponsors</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="actions">
+      <a class="btn ghost" id="navPlan" href="#itinerary">My plan <b id="planCount">0</b></a>
+      <a class="btn" href="#perks">Get a pass</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" id="hero">
+    <div class="wrap">
+      <div class="hero-meta"><span>National inter-college cultural festival</span><span>4 &ndash; 7 December 2026</span><span>SRM, Chennai</span></div>
+      <canvas id="heroCv" role="img" aria-label="MILAN 2026, drawn in particles that scatter when the cursor passes"></canvas>
+      <div class="hero-grid">
+        <div>
+          <h1>Four days. <em>148 colleges.</em> One very loud quad.</h1>
+          <p class="sub"><span class="deva">मिलन</span> means a meeting. Students from every corner of the country bring music, dance, theatre, words and wild ideas to one campus, and compete for the Overall Championship.</p>
+          <div class="cta">
+            <a class="btn saffron" href="#events">Browse events</a>
+            <a class="btn ghost" href="#volunteers">Volunteer with us</a>
+          </div>
+        </div>
+        <div>
+          <div class="count" aria-live="off"><div><b id="cdD">--</b><small>Days</small></div><div><b id="cdH">--</b><small>Hours</small></div><div><b id="cdM">--</b><small>Min</small></div><div><b id="cdS">--</b><small>Sec</small></div></div>
+          <p class="count-cap" id="cdCap">Gates open Friday 4 December, 9:00 AM IST</p>
+        </div>
+      </div>
+      <div class="stats">
+        <div><b id="stPrize">--</b><span>in prize money</span></div>
+        <div><b id="stEvents">--</b><span>competitions</span></div>
+        <div><b>4</b><span>pro nights, one stage</span></div>
+        <div><b>148</b><span>colleges registered</span></div>
+        <div><b>25,000</b><span>visitors expected</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="track" id="marq"></div></div>
+
+  <section class="sec" id="events">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Competitions</span><h2>Pick your stage.</h2></div>
+        <p>Every competition is open to enrolled UG and PG students with a valid college ID. Add the ones you want and the itinerary will warn you about clashes.</p>
+      </div>
+      <div class="filters">
+        <div class="chips" id="dayChips" role="group" aria-label="Filter by day"></div>
+        <div class="chips" id="catChips" role="group" aria-label="Filter by category"></div>
+        <div class="row">
+          <label class="sr-only" for="q">Search events</label>
+          <input class="search" id="q" type="search" placeholder="Search by name, venue or word, e.g. &ldquo;solo&rdquo;">
+          <span class="count-line" id="evCount"></span>
+        </div>
+      </div>
+      <div class="grid" id="evGrid"></div>
+    </div>
+  </section>
+
+  <section class="sec alt" id="pronights">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">After dark</span><h2>Four pro nights.</h2></div>
+        <p>Gates at 6:30 PM, sound at 7:30 PM. Every pass includes all four nights; Day Pass holders pick one.</p>
+      </div>
+      <div class="shows" id="shows"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="itinerary">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Hour by hour</span><h2>The itinerary.</h2></div>
+        <p>Everything that happens on campus, in order. Save events to build your own day and the clash detector will tell you what overlaps.</p>
+      </div>
+      <div class="it-bar">
+        <div class="chips" id="itDays" role="tablist" aria-label="Itinerary day"></div>
+        <label class="switch"><input type="checkbox" id="onlyPlan"> Only my plan</label>
+      </div>
+      <div class="it-grid">
+        <ol class="tl" id="tl"></ol>
+        <div class="side">
+          <div class="panel">
+            <h3>Your plan</h3>
+            <p class="small" id="planSum">Nothing saved yet.</p>
+          </div>
+          <div class="panel">
+            <h3>Campus map</h3>
+            <p class="small">Tap a venue to see what is on there.</p>
+            <div class="map-wrap">
+              <svg viewBox="0 0 640 372" role="group" aria-label="Schematic campus map" id="map">
+                <path class="road" d="M10 262 H630 M205 14 V362 M445 14 V362"/>
+              </svg>
+            </div>
+            <ul class="vlist" id="vlist"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt" id="leaderboard">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Pre-fest league</span><h2>Who is showing up?</h2></div>
+        <p>Colleges earn Milan Points for registrations, online qualifier rounds and campus drives. Standings update as teams sign up. Showing the top 12 of 148.</p>
+      </div>
+      <div class="lb-tabs" role="tablist" aria-label="Leaderboard view" id="lbTabs">
+        <button class="chip" role="tab" aria-selected="true" data-mode="pts">Colleges by points</button>
+        <button class="chip" role="tab" aria-selected="false" data-mode="reg">Colleges by participants</button>
+        <button class="chip" role="tab" aria-selected="false" data-mode="ind">Top participants</button>
+        <span class="live"><i></i>Demo data, updating live</span>
+      </div>
+      <div class="lb-box">
+        <div class="lb-head" id="lbHead"><span>#</span><span>College</span><span style="text-align:right" id="lbCol">Points</span><span style="text-align:right">Move</span></div>
+        <ol class="lb-list" id="lbList"></ol>
+        <ol class="lb-list" id="indList" hidden></ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band" id="perks">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Perks and passes</span><h2>Show up, get rewarded.</h2></div>
+        <p>Pick a pass for entry and stay. Then every event you enter unlocks something on the ladder below.</p>
+      </div>
+      <div class="passes">
+        <div class="pass"><h3>Day Pass</h3><div class="price">&#8377;399</div><ul><li>One campus day</li><li>One pro night of your choice</li><li>Digital certificate</li></ul></div>
+        <div class="pass pop"><span class="tag">Most picked</span><h3>Milan Pass</h3><div class="price">&#8377;999</div><ul><li>All four days, all four pro nights</li><li>Milan &rsquo;26 tee and kit</li><li>&#8377;300 Food Street voucher</li></ul></div>
+        <div class="pass"><h3>Stay Pass</h3><div class="price">&#8377;2,499</div><ul><li>Everything in Milan Pass</li><li>3 nights in campus hostels</li><li>Station and airport shuttle</li></ul></div>
+      </div>
+      <div class="ladder">
+        <div>
+          <h3>The perk ladder</h3>
+          <div class="big" id="perkN">3</div>
+          <label for="perkRange">events you enter</label>
+          <input type="range" id="perkRange" min="0" max="8" value="3" step="1">
+          <div class="ticks"><span>0</span><span>2</span><span>4</span><span>6</span><span>8</span></div>
+          <p class="fin">Finalists also get travel reimbursement up to &#8377;2,500 and three free nights on campus, on top of anything unlocked here.</p>
+        </div>
+        <ul class="perk-list" id="perkList"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="volunteers">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Volunteers</span><h2>Run the show.</h2></div>
+        <p>Milan runs on 340 students who would rather be backstage. Pick a team, pick your shifts, and keep a front-row view of everything.</p>
+      </div>
+      <div class="vol-grid">
+        <div>
+          <div class="vol-stat"><b id="volFilled">--</b><span id="volCap">spots filled</span></div>
+          <span class="bar" style="height:10px"><i id="volBar"></i></span>
+          <div class="roles" id="roles" role="group" aria-label="Volunteer teams"></div>
+          <ul class="vperks">
+            <li>Free Milan Pass</li><li>Two meals a day</li><li>Crew hoodie</li><li>Certificate and recommendation letter</li><li>Standing area at pro nights</li><li>One pro-night plus-one</li>
+          </ul>
+        </div>
+        <form class="panel" id="volForm" novalidate>
+          <h3>Apply to volunteer</h3>
+          <div class="two">
+            <label for="vName">Full name<input id="vName" name="name" autocomplete="name" required></label>
+            <label for="vCollege">College<input id="vCollege" name="college" required></label>
+          </div>
+          <label for="vEmail">Email<input id="vEmail" name="email" type="email" autocomplete="email" required></label>
+          <div class="two">
+            <label for="vRole">Team<select id="vRole" name="role"></select></label>
+            <label for="vShift">Availability<select id="vShift" name="shift"><option>Fest days, 4&ndash;7 Dec</option><option>Setup, 1&ndash;3 Dec</option><option>Teardown, 8 Dec</option><option>Any day</option></select></label>
+          </div>
+          <label for="vWhy">Anything we should know?<textarea id="vWhy" name="why" rows="3" placeholder="Languages you speak, skills, access needs"></textarea></label>
+          <button class="btn" type="submit">Send application</button>
+          <div class="done" id="volDone" hidden></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt" id="sponsors">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Partners</span><h2>Backed by people who like loud rooms.</h2></div>
+        <p>Sponsor money pays for stages, prizes and the free meals volunteers eat. All brands shown are fictional.</p>
+      </div>
+      <div id="sponsorTiers"></div>
+      <div class="cta-sp">
+        <p><strong>Want your brand on the quad?</strong> Packages start at &#8377;75,000 and include stall space, pro-night branding and access to participant data with consent.</p>
+        <code id="spMail">partners@milan26.example</code>
+        <button class="btn ghost" type="button" id="spCopy">Copy email</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="faq">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="eyebrow">Before you travel</span><h2>Questions, answered.</h2></div></div>
+      <div class="faq">
+        <details><summary>Who can participate?</summary><p>Any enrolled UG or PG student with a valid college ID. Teams are drawn from a single college. Alumni and school students can attend pro nights but cannot enter competitions.</p></details>
+        <details><summary>When do registrations close?</summary><p>Friday 27 November at 11:59 PM. Team lists lock then, with one substitution allowed until 2 December.</p></details>
+        <details><summary>Is accommodation provided?</summary><p>The Stay Pass includes three nights in campus hostels, with separate blocks and 600 beds in total. Rooms are allotted in the order passes are bought.</p></details>
+        <details><summary>How does travel reimbursement work?</summary><p>Finalists claim up to &#8377;2,500 at the Gate 2 helpdesk after the prize ceremony, with original tickets and the college ID.</p></details>
+        <details><summary>What about safety and access?</summary><p>There is a medical tent at the Main Stage, a quiet room in the Library, step-free routes to every venue and a 24-hour helpline printed on every badge.</p></details>
+        <details><summary>Can I get a refund?</summary><p>Passes are refundable in full until 20 November, and half until 30 November. After that they can be transferred to another student of your college.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h2>See you at the <em>quad.</em></h2>
+      <p style="margin-top:14px;max-width:46ch">SRM, Chennai. Gates open Friday 4 December at 9:00 AM. Registration desk at Gate 2 opens at 8:00 AM.</p>
+    </div>
+    <ul>
+      <li><a href="#events">Events</a></li><li><a href="#itinerary">Itinerary</a></li><li><a href="#leaderboard">Leaderboard</a></li><li><a href="#perks">Passes and perks</a></li><li><a href="#volunteers">Volunteer</a></li>
+    </ul>
+    <p class="fine">Milan 2026 is a design exercise. Every college, sponsor, artist, student and number on this page is made up, and the forms send nothing anywhere.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+
+  /* ---------- data ---------- */
+  var DAYS = [
+    { d: 1, short: 'Fri 4', long: 'Friday, 4 December' },
+    { d: 2, short: 'Sat 5', long: 'Saturday, 5 December' },
+    { d: 3, short: 'Sun 6', long: 'Sunday, 6 December' },
+    { d: 4, short: 'Mon 7', long: 'Monday, 7 December' }
+  ];
+  var CATS = { music: 'Music', dance: 'Dance', theatre: 'Theatre', words: 'Words', visual: 'Visual and film', play: 'Play and quiz' };
+
+  // id, name, cat, day, start, end, venue, prize (INR), team, blurb
+  var EVENTS = [
+    ['e1', 'Raag Rewind', 'music', 1, '11:00', '14:00', 'Amphitheatre', 60000, 'Solo', 'Classical and fusion vocals. One raga, one reinvention, six minutes on stage.'],
+    ['e2', 'Nukkad Nights', 'theatre', 1, '14:30', '17:00', 'Banyan Court', 75000, '6 to 12', 'Street play on a live civic issue. No mics, no sets, and the crowd decides the encore.'],
+    ['e3', 'Pen & Pause', 'words', 1, '12:00', '14:00', 'Library Lawn', 30000, 'Solo', 'Extempore poetry in any language. Topics come out of a jar, you get ten minutes.'],
+    ['e4', 'Pixel Rangoli', 'visual', 1, '10:00', '16:00', 'Lab Block', 40000, 'Duo', 'Rangoli rebuilt as generative code and projection mapping on the lab floor.'],
+    ['e5', 'Quizzaria', 'play', 1, '15:00', '18:00', 'Seminar Hall A', 50000, '3', 'Five rounds, from Bollywood trivia to a buzzer finale judged by a former quizmaster.'],
+    ['e6', 'Brushfire', 'visual', 2, '09:30', '13:30', 'Mural Wall', 80000, '4', 'A 12-metre live mural. The theme is revealed at 9:30 sharp and paint is provided.'],
+    ['e7', 'Beat Boxed', 'music', 2, '14:00', '18:00', 'Main Stage', 150000, '4 to 8', 'Battle of the bands. Original sets only, twelve minutes each, three judges.'],
+    ['e8', 'Cypher Circuit', 'dance', 2, '11:00', '14:00', 'Open Arena', 100000, '3 to 6', 'Street dance battle in knockout rounds. DJ spins, crews answer.'],
+    ['e9', 'Thread & Thesis', 'visual', 2, '15:00', '17:30', 'Auditorium', 90000, '8 to 14', 'Sustainable fashion walk. Every garment must be built from reclaimed fabric.'],
+    ['e10', 'Frame 48', 'visual', 2, '10:00', '13:30', 'Auditorium', 70000, '5', 'Short films shot in 48 hours from a surprise prompt, screened to a live audience.'],
+    ['e11', 'Slam Dunk Verse', 'words', 2, '16:00', '18:30', 'Library Lawn', 35000, 'Solo', 'Poetry slam with scorecards. Three minutes, no props, no second chances.'],
+    ['e12', 'Nritya Nexus', 'dance', 3, '10:30', '14:00', 'Amphitheatre', 90000, 'Solo or group', 'Classical dance across Bharatanatyam, Kathak, Odissi and Mohiniyattam.'],
+    ['e13', 'Mic Drop Mixer', 'play', 3, '15:00', '17:30', 'Auditorium', 40000, 'Solo', 'Stand-up with five-minute sets. Keep it clean enough for a college dean.'],
+    ['e14', 'Mono-Act', 'theatre', 3, '11:00', '13:30', 'Banyan Court', 30000, 'Solo', 'One actor, many voices, seven minutes and no costume changes.'],
+    ['e15', 'Debate Dhaba', 'words', 3, '10:00', '13:00', 'Seminar Hall A', 45000, 'Duo', 'Parliamentary debate staged at a tea stall. Chai is on the house, rebuttals are not.'],
+    ['e16', 'Rasa Jam', 'play', 3, '10:00', '18:00', 'Lab Block', 120000, '2 to 4', 'Build a playable game around one of the nine rasas in eight hours.'],
+    ['e17', 'Cosplay Parade', 'play', 3, '16:00', '18:00', 'Food Street', 25000, 'Solo or group', 'Walk the length of Food Street in a costume you built yourself.'],
+    ['e18', 'Sangam', 'dance', 4, '11:00', '14:30', 'Main Stage', 200000, '10 to 24', 'The group dance finale. Twelve teams, one stage, and the biggest prize of the fest.'],
+    ['e19', 'Chai & Chords', 'music', 4, '10:00', '12:30', 'Amphitheatre', 50000, 'Duo', 'Unplugged finals. Two voices, two instruments, no pedals and no backing tracks.'],
+    ['e20', 'Open Mic Orchard', 'music', 4, '14:00', '16:00', 'Library Lawn', 0, 'Anyone', 'No judges, no prizes. Walk up, sign the sheet and play.']
+  ].map(function (a) { return { id: a[0], title: a[1], kind: 'event', cat: a[2], day: a[3], s: a[4], e: a[5], venue: a[6], prize: a[7], team: a[8], blurb: a[9] }; });
+
+  var SHOWS = [
+    { id: 's1', title: 'The Monsoon Circuit', genre: 'Indie rock', day: 1, s: '19:30', e: '22:00', venue: 'Main Stage', blurb: 'Seven players, one borrowed amp and a setlist written in the rain.', bg: 'linear-gradient(135deg,#FF9F1C,#E4007C)' },
+    { id: 's2', title: 'Aaru & The Static Choir', genre: 'Folk-tronica', day: 2, s: '19:30', e: '22:30', venue: 'Main Stage', blurb: 'Field-recorded lullabies run through analogue synths, with a twelve-voice choir.', bg: 'linear-gradient(135deg,#19C9C0,#5B3FF0)' },
+    { id: 's3', title: 'Dhwani Collective', genre: 'Sufi and qawwali', day: 3, s: '19:30', e: '22:30', venue: 'Main Stage', blurb: 'A late-night sitting of harmoniums, hand claps and very long notes.', bg: 'linear-gradient(135deg,#7A5CFF,#1F78E0)' },
+    { id: 's4', title: 'Rooftop Raga ft. DJ Kavach', genre: 'Closing night', day: 4, s: '19:30', e: '23:00', venue: 'Main Stage', blurb: 'Classical ragas stretched over four-on-the-floor. Wear shoes you can lose.', bg: 'linear-gradient(135deg,#FF9F1C,#E4007C 55%,#7A5CFF)' }
+  ].map(function (s) { s.kind = 'show'; return s; });
+
+  var EXTRAS = [
+    { id: 'x1', title: 'Registration and badge desk', day: 1, s: '08:00', e: '10:00', venue: 'Gate 2 Helpdesk' },
+    { id: 'x2', title: 'Inauguration and lamp procession', day: 1, s: '10:00', e: '10:45', venue: 'Main Stage' },
+    { id: 'x3', title: 'Masterclass: sound for the stage', day: 2, s: '14:30', e: '16:00', venue: 'Seminar Hall A' },
+    { id: 'x4', title: 'Masterclass: storyboarding in a day', day: 3, s: '14:00', e: '15:30', venue: 'Seminar Hall A' },
+    { id: 'x5', title: 'Heritage walk: campus murals', day: 3, s: '18:30', e: '19:15', venue: 'Mural Wall' },
+    { id: 'x6', title: 'Prize distribution and Overall Championship', day: 4, s: '16:30', e: '18:30', venue: 'Main Stage' }
+  ].map(function (x) { x.kind = 'extra'; return x; });
+  DAYS.forEach(function (d) { EXTRAS.push({ id: 'xf' + d.d, title: 'Food Street opens', kind: 'extra', day: d.d, s: '12:00', e: '22:00', venue: 'Food Street' }); });
+
+  var ALL = EVENTS.concat(SHOWS, EXTRAS);
+  var BYID = {}; ALL.forEach(function (i) { BYID[i.id] = i; });
+
+  var mins = function (t) { var p = t.split(':'); return +p[0] * 60 + +p[1]; };
+  var f12 = function (t) { var p = t.split(':').map(Number), h = p[0], ap = h >= 12 ? 'PM' : 'AM'; h = h % 12 || 12; return h + ':' + String(p[1]).padStart(2, '0') + ' ' + ap; };
+  var inr = function (n) { return '₹' + n.toLocaleString('en-IN'); };
+  var dayShort = function (d) { return DAYS[d - 1].short; };
+
+  /* ---------- hero stats, marquee, countdown ---------- */
+  var totalPrize = EVENTS.reduce(function (a, e) { return a + e.prize; }, 0);
+  $('#stPrize').textContent = '₹' + (Math.round(totalPrize / 1e4) / 10) + ' lakh';
+  $('#stEvents').textContent = EVENTS.length;
+  var mq = ['4–7 December 2026', '148 colleges', EVENTS.length + ' competitions', '4 pro nights', '₹' + (Math.round(totalPrize / 1e4) / 10) + ' lakh in prizes', 'Indore', 'Registrations close 27 Nov', 'Food Street open daily'];
+  var mqHtml = mq.map(function (t) { return '<span>' + esc(t) + '</span>'; }).join('');
+  $('#marq').innerHTML = mqHtml + mqHtml;
+
+  var T0 = new Date('2026-12-04T09:00:00+05:30').getTime();
+  function tick() {
+    var d = T0 - Date.now();
+    if (d <= 0) { ['cdD', 'cdH', 'cdM', 'cdS'].forEach(function (i) { $('#' + i).textContent = '0'; }); $('#cdCap').textContent = 'Milan 2026 is live'; return; }
+    var s = Math.floor(d / 1000);
+    $('#cdD').textContent = Math.floor(s / 86400);
+    $('#cdH').textContent = String(Math.floor(s % 86400 / 3600)).padStart(2, '0');
+    $('#cdM').textContent = String(Math.floor(s % 3600 / 60)).padStart(2, '0');
+    $('#cdS').textContent = String(s % 60).padStart(2, '0');
+  }
+  tick(); setInterval(tick, 1000);
+
+  /* ---------- plan state ---------- */
+  var plan = new Set();
+  try { plan = new Set(JSON.parse(localStorage.getItem('milan26-plan') || '[]')); } catch (e) {}
+  function savePlan() { try { localStorage.setItem('milan26-plan', JSON.stringify(Array.from(plan))); } catch (e) {} }
+  function planBtn(id) {
+    var on = plan.has(id);
+    return '<button class="plan-btn" type="button" data-id="' + id + '" aria-pressed="' + on + '">' + (on ? 'Saved ✓' : '+ Add to my plan') + '</button>';
+  }
+  function syncButtons() {
+    $$('.plan-btn').forEach(function (b) {
+      var on = plan.has(b.dataset.id);
+      b.setAttribute('aria-pressed', on);
+      b.textContent = on ? 'Saved ✓' : '+ Add to my plan';
+    });
+    $('#planCount').textContent = plan.size;
+  }
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest('.plan-btn');
+    if (!b) return;
+    var id = b.dataset.id;
+    if (plan.has(id)) plan.delete(id); else plan.add(id);
+    savePlan(); syncButtons(); renderItinerary();
+  });
+
+  /* ---------- events ---------- */
+  var fDay = 0, fCat = 'all', fQ = '';
+  function chipRow(el, items, cur, attr) {
+    el.innerHTML = items.map(function (i) {
+      return '<button class="chip" type="button" ' + attr + '="' + i.v + '" aria-pressed="' + (String(cur) === String(i.v)) + '"' + (i.c ? ' style="--cc:var(--c-' + i.v + ')"' : '') + '>' + (i.c ? '<i></i>' : '') + esc(i.t) + '</button>';
+    }).join('');
+  }
+  function renderFilters() {
+    chipRow($('#dayChips'), [{ v: 0, t: 'All days' }].concat(DAYS.map(function (d) { return { v: d.d, t: d.short }; })), fDay, 'data-day');
+    chipRow($('#catChips'), [{ v: 'all', t: 'All types' }].concat(Object.keys(CATS).map(function (k) { return { v: k, t: CATS[k], c: true }; })), fCat, 'data-cat');
+  }
+  function renderEvents() {
+    var q = fQ.trim().toLowerCase();
+    var list = EVENTS.filter(function (e) {
+      return (!fDay || e.day === fDay) && (fCat === 'all' || e.cat === fCat) &&
+        (!q || (e.title + ' ' + e.venue + ' ' + e.blurb + ' ' + e.team + ' ' + CATS[e.cat]).toLowerCase().indexOf(q) > -1);
+    });
+    $('#evCount').textContent = 'Showing ' + list.length + ' of ' + EVENTS.length;
+    $('#evGrid').innerHTML = list.length ? list.map(function (e) {
+      return '<article class="ev" style="--cc:var(--c-' + e.cat + ')">' +
+        '<div class="ev-top"><span class="cat"><i></i>' + esc(CATS[e.cat]) + '</span><span>' + dayShort(e.day) + ' &middot; ' + f12(e.s) + '</span></div>' +
+        '<h3>' + esc(e.title) + '</h3><p>' + esc(e.blurb) + '</p>' +
+        '<dl class="ev-meta"><div><dt>Venue</dt><dd>' + esc(e.venue) + '</dd></div><div><dt>Team</dt><dd>' + esc(e.team) + '</dd></div><div><dt>Prize</dt><dd>' + (e.prize ? inr(e.prize) : 'Open stage') + '</dd></div></dl>' +
+        planBtn(e.id) + '</article>';
+    }).join('') : '<div class="empty">No events match. Clear the search or pick another day.</div>';
+  }
+  $('#dayChips').addEventListener('click', function (ev) { var b = ev.target.closest('[data-day]'); if (!b) return; fDay = +b.dataset.day; renderFilters(); renderEvents(); });
+  $('#catChips').addEventListener('click', function (ev) { var b = ev.target.closest('[data-cat]'); if (!b) return; fCat = b.dataset.cat; renderFilters(); renderEvents(); });
+  $('#q').addEventListener('input', function (ev) { fQ = ev.target.value; renderEvents(); });
+
+  /* ---------- pro nights ---------- */
+  $('#shows').innerHTML = SHOWS.map(function (s, i) {
+    return '<article class="show"><div class="art" style="background:' + s.bg + '"><b>0' + (i + 1) + '</b><span>' + dayShort(s.day) + ' Dec &middot; ' + f12(s.s) + '</span></div>' +
+      '<div class="body"><span class="genre">' + esc(s.genre) + '</span><h3>' + esc(s.title) + '</h3><p>' + esc(s.blurb) + '</p>' + planBtn(s.id) + '</div></article>';
+  }).join('');
+
+  /* ---------- itinerary ---------- */
+  var itDay = 1, onlyPlan = false;
+  function clashSet() {
+    var out = {}, items = Array.from(plan).map(function (id) { return BYID[id]; }).filter(Boolean);
+    items.forEach(function (a) {
+      items.forEach(function (b) {
+        if (a.id !== b.id && a.day === b.day && mins(a.s) < mins(b.e) && mins(b.s) < mins(a.e)) { (out[a.id] = out[a.id] || []).push(b.title); }
+      });
+    });
+    return out;
+  }
+  function renderItinerary() {
+    $('#itDays').innerHTML = DAYS.map(function (d) {
+      var n = Array.from(plan).filter(function (id) { return BYID[id] && BYID[id].day === d.d; }).length;
+      return '<button class="chip" type="button" role="tab" data-itday="' + d.d + '" aria-selected="' + (itDay === d.d) + '">' + d.short + (n ? ' · ' + n : '') + '</button>';
+    }).join('');
+    var clashes = clashSet();
+    var rows = ALL.filter(function (i) { return i.day === itDay && (!onlyPlan || plan.has(i.id)); })
+      .sort(function (a, b) { return mins(a.s) - mins(b.s) || mins(a.e) - mins(b.e); });
+    $('#tl').innerHTML = rows.length ? rows.map(function (i) {
+      var kind = i.kind === 'show' ? 'Pro night' : i.kind === 'event' ? 'Competition · ' + CATS[i.cat] : 'On campus';
+      var cl = clashes[i.id] ? '<span class="clash">Clashes with ' + esc(clashes[i.id][0]) + (clashes[i.id].length > 1 ? ' +' + (clashes[i.id].length - 1) : '') + '</span>' : '';
+      return '<li class="tl-row kind-' + i.kind + '"' + (i.cat ? ' style="--cc:var(--c-' + i.cat + ')"' : '') + '>' +
+        '<div class="tl-time">' + f12(i.s) + '<small>to ' + f12(i.e) + '</small></div>' +
+        '<div class="tl-main"><span class="tl-kind">' + esc(kind) + '</span><strong>' + esc(i.title) + '</strong><span class="tl-venue">' + esc(i.venue) + '</span>' + cl + '</div>' +
+        (i.kind === 'extra' ? '' : planBtn(i.id)) + '</li>';
+    }).join('') : '<li class="tl-row"><div class="tl-main" style="grid-column:1/-1"><strong>Nothing planned for ' + DAYS[itDay - 1].long + '.</strong><span class="tl-venue">Save events from the cards above, or turn off &ldquo;Only my plan&rdquo;.</span></div></li>';
+    var cc = Object.keys(clashes).length / 2;
+    $('#planSum').textContent = plan.size
+      ? plan.size + ' saved across ' + new Set(Array.from(plan).map(function (id) { return BYID[id] && BYID[id].day; })).size + ' day(s). ' + (cc ? Math.ceil(cc) + ' clash' + (Math.ceil(cc) > 1 ? 'es' : '') + ' to sort out.' : 'No clashes.')
+      : 'Nothing saved yet. Add events from the cards and they appear here.';
+  }
+  $('#itDays').addEventListener('click', function (ev) { var b = ev.target.closest('[data-itday]'); if (!b) return; itDay = +b.dataset.itday; renderItinerary(); });
+  $('#onlyPlan').addEventListener('change', function (ev) { onlyPlan = ev.target.checked; renderItinerary(); });
+  $('#navPlan').addEventListener('click', function () {
+    onlyPlan = true; $('#onlyPlan').checked = true;
+    var first = Array.from(plan).map(function (id) { return BYID[id]; }).filter(Boolean).sort(function (a, b) { return a.day - b.day; })[0];
+    if (first) itDay = first.day;
+    renderItinerary();
+  });
+
+  /* campus map */
+  var VENUES = [
+    ['Amphitheatre', 30, 30, 150, 90], ['Main Stage', 230, 30, 190, 90], ['Auditorium', 470, 30, 140, 90],
+    ['Banyan Court', 30, 160, 150, 80], ['Library Lawn', 230, 160, 190, 80], ['Mural Wall', 470, 160, 140, 80],
+    ['Open Arena', 30, 296, 150, 60], ['Lab Block', 230, 296, 190, 60], ['Seminar Hall A', 470, 296, 140, 60],
+    ['Food Street', 30, 250, 580, 24]
+  ];
+  var selVenue = 'Main Stage';
+  function renderMap() {
+    var svg = $('#map'), html = '<path class="road" d="M10 284 H630 M205 14 V362 M445 14 V362"/>';
+    VENUES.forEach(function (v) {
+      var n = ALL.filter(function (i) { return i.venue === v[0] && i.kind !== 'extra'; }).length;
+      var street = v[0] === 'Food Street';
+      html += '<g class="vn' + (selVenue === v[0] ? ' sel' : '') + '" data-v="' + v[0] + '" role="button" tabindex="0" aria-label="' + v[0] + ', ' + n + ' events"><rect x="' + v[1] + '" y="' + v[2] + '" width="' + v[3] + '" height="' + v[4] + '" rx="4"/>' +
+        '<text x="' + (v[1] + v[3] / 2) + '" y="' + (v[2] + v[4] / 2 + (street ? 4 : 0)) + '">' + v[0] + '</text>' +
+        (street ? '' : '<text class="n" x="' + (v[1] + v[3] / 2) + '" y="' + (v[2] + v[4] / 2 + 17) + '">' + n + ' events</text>') + '</g>';
+    });
+    svg.innerHTML = html;
+    var items = ALL.filter(function (i) { return i.venue === selVenue; }).sort(function (a, b) { return a.day - b.day || mins(a.s) - mins(b.s); });
+    $('#vlist').innerHTML = items.length ? items.map(function (i) { return '<li><div>' + esc(i.title) + '</div><span>' + dayShort(i.day) + ' &middot; ' + f12(i.s) + '</span></li>'; }).join('') : '<li>Nothing scheduled here.</li>';
+  }
+  $('#map').addEventListener('click', function (ev) { var g = ev.target.closest('[data-v]'); if (!g) return; selVenue = g.dataset.v; renderMap(); });
+  $('#map').addEventListener('keydown', function (ev) { if (ev.key !== 'Enter' && ev.key !== ' ') return; var g = ev.target.closest('[data-v]'); if (!g) return; ev.preventDefault(); selVenue = g.dataset.v; renderMap(); var k = $('[data-v="' + selVenue + '"]'); if (k) k.focus(); });
+
+  /* ---------- leaderboard ---------- */
+  var COLLEGES = [
+    { id: 'c1', name: 'Kaveri College of Arts & Design', city: 'Mysuru', reg: 241, pts: 1860 },
+    { id: 'c2', name: 'Aravalli School of Performing Arts', city: 'Jaipur', reg: 228, pts: 1795 },
+    { id: 'c3', name: 'Deccan Film & Media Institute', city: 'Hyderabad', reg: 205, pts: 1710 },
+    { id: 'c4', name: 'Sundarban Polytechnic & Arts', city: 'Kolkata', reg: 197, pts: 1632 },
+    { id: 'c5', name: 'Meghdoot University', city: 'Shillong', reg: 176, pts: 1540 },
+    { id: 'c6', name: 'Brahmaputra Engineering College', city: 'Guwahati', reg: 169, pts: 1488 },
+    { id: 'c7', name: 'Nilgiri Institute of Management', city: 'Coimbatore', reg: 158, pts: 1405 },
+    { id: 'c8', name: 'Marusthal Institute of Design', city: 'Jodhpur', reg: 149, pts: 1322 },
+    { id: 'c9', name: 'Godavari Medical & Allied Sciences', city: 'Visakhapatnam', reg: 133, pts: 1210 },
+    { id: 'c10', name: 'Konkan School of Law', city: 'Panaji', reg: 121, pts: 1144 },
+    { id: 'c11', name: 'Himalaya Hill College', city: 'Dehradun', reg: 112, pts: 1068 },
+    { id: 'c12', name: 'Tungabhadra School of Design', city: 'Hubballi', reg: 104, pts: 990 }
+  ];
+  var PEOPLE = [
+    ['Aanya Iyer', 'Kaveri College of Arts & Design', 412, 6, 'Streak: 6 entries'],
+    ['Kabir Sandhu', 'Aravalli School of Performing Arts', 388, 5, 'Most improved'],
+    ['Meera Pillai', 'Deccan Film & Media Institute', 365, 5, 'Qualifier topper'],
+    ['Rohan Das', 'Sundarban Polytechnic & Arts', 341, 4, 'Team captain'],
+    ['Zoya Khan', 'Meghdoot University', 322, 4, 'Streak: 4 entries'],
+    ['Ishaan Borkar', 'Brahmaputra Engineering College', 297, 4, 'Campus ambassador'],
+    ['Tanvi Rao', 'Nilgiri Institute of Management', 276, 3, 'Qualifier topper'],
+    ['Arjun Nambiar', 'Godavari Medical & Allied Sciences', 254, 3, 'Rookie of the week']
+  ];
+  var mode = 'pts', prev = {}, rowEls = {}, lbList = $('#lbList');
+  function ranked() { return COLLEGES.slice().sort(function (a, b) { return b[mode] - a[mode] || a.name.localeCompare(b.name); }); }
+  COLLEGES.forEach(function (c) {
+    var li = document.createElement('li'); li.className = 'lb-row'; li.dataset.id = c.id;
+    li.innerHTML = '<span class="rk"></span><div class="who"><strong></strong><small></small><span class="bar"><i></i></span></div><span class="val"><b></b></span><span class="mv"></span>';
+    rowEls[c.id] = li;
+  });
+  function renderBoard(animate, flashId) {
+    var rows = Array.prototype.slice.call(lbList.children), first = {};
+    rows.forEach(function (r) { first[r.dataset.id] = r.getBoundingClientRect().top; });
+    var list = ranked(), max = list[0][mode];
+    list.forEach(function (c, i) {
+      var li = rowEls[c.id], other = mode === 'pts' ? c.reg + ' registered' : c.pts.toLocaleString('en-IN') + ' points';
+      $('.rk', li).textContent = i + 1;
+      $('strong', li).textContent = c.name;
+      $('small', li).textContent = c.city + ' · ' + other;
+      $('.bar i', li).style.width = Math.round(c[mode] / max * 100) + '%';
+      $('.val b', li).textContent = c[mode].toLocaleString('en-IN');
+      var d = prev[c.id] ? prev[c.id] - (i + 1) : 0, mv = $('.mv', li);
+      mv.textContent = d > 0 ? '▲' + d : d < 0 ? '▼' + (-d) : '–';
+      mv.className = 'mv' + (d > 0 ? ' up' : d < 0 ? ' down' : '');
+      lbList.appendChild(li);
+    });
+    if (animate && !reduce) {
+      rows.forEach(function (r) {
+        var dy = first[r.dataset.id] - r.getBoundingClientRect().top;
+        if (dy) { r.style.transition = 'none'; r.style.transform = 'translateY(' + dy + 'px)'; void r.offsetWidth; r.style.transition = 'transform .6s cubic-bezier(.2,.8,.2,1)'; r.style.transform = ''; }
+      });
+    }
+    if (flashId && !reduce) { var f = rowEls[flashId]; f.classList.remove('flash'); void f.offsetWidth; f.classList.add('flash'); }
+  }
+  function renderPeople() {
+    $('#indList').innerHTML = PEOPLE.map(function (p, i) {
+      return '<li class="ind-row"><span class="rk">' + (i + 1) + '</span><div><strong>' + esc(p[0]) + '</strong><small>' + esc(p[1]) + ' &middot; ' + p[3] + ' events entered</small><span class="medal">' + esc(p[4]) + '</span></div><div><b>' + p[2] + '</b><small>points</small></div></li>';
+    }).join('');
+  }
+  $('#lbTabs').addEventListener('click', function (ev) {
+    var b = ev.target.closest('[data-mode]'); if (!b) return;
+    mode = b.dataset.mode;
+    $$('#lbTabs [data-mode]').forEach(function (x) { x.setAttribute('aria-selected', x === b); });
+    var ind = mode === 'ind';
+    lbList.hidden = ind; $('#indList').hidden = !ind; $('#lbHead').hidden = ind;
+    if (!ind) { $('#lbCol').textContent = mode === 'pts' ? 'Points' : 'People'; prev = {}; renderBoard(false); }
+  });
+  function bump() {
+    if (mode === 'ind') return;
+    var before = {}; ranked().forEach(function (c, i) { before[c.id] = i + 1; });
+    var c = COLLEGES[Math.floor(Math.random() * COLLEGES.length)];
+    c.reg += 1 + Math.floor(Math.random() * 4); c.pts += 8 + Math.floor(Math.random() * 28);
+    prev = before; renderBoard(true, c.id);
+  }
+  renderBoard(false); renderPeople();
+  setInterval(function () { if (!document.hidden) bump(); }, 4800);
+
+  /* ---------- perks ---------- */
+  var PERKS = [
+    [1, 'Participation certificate, digital and print'], [2, 'Priority queue at every pro night'], [3, 'Milan ’26 tee in the limited colourway'],
+    [4, '₹500 Food Street voucher'], [5, 'Seat in one masterclass of your choice'], [6, 'Backstage tour during a pro night'],
+    [7, 'Sponsor internship fast-track'], [8, 'Milan Legend jacket']
+  ];
+  function renderPerks() {
+    var n = +$('#perkRange').value; $('#perkN').textContent = n;
+    $('#perkList').innerHTML = PERKS.map(function (p) { return '<li class="' + (n >= p[0] ? 'on' : '') + '"><span>' + (n >= p[0] ? '✓' : p[0]) + '</span>' + esc(p[1]) + '</li>'; }).join('');
+  }
+  $('#perkRange').addEventListener('input', renderPerks); renderPerks();
+
+  /* ---------- volunteers ---------- */
+  var ROLES = [
+    ['Stage Crew', 60, 48, 'Cue lights, cable runs and stage turnarounds.'],
+    ['Hospitality and Stay', 80, 71, 'Meet teams at the station and run hostel check-ins.'],
+    ['Registration Desk', 40, 33, 'Badges, wristbands and a thousand questions.'],
+    ['Social and Content', 30, 26, 'Reels, photo walks and the live blog.'],
+    ['Logistics and Transport', 90, 62, 'Shuttles, props and green rooms.'],
+    ['Green Team', 40, 38, 'Zero-waste stations and the reusable cup return.']
+  ];
+  var cap = ROLES.reduce(function (a, r) { return a + r[1]; }, 0), filled = ROLES.reduce(function (a, r) { return a + r[2]; }, 0);
+  $('#volFilled').textContent = filled; $('#volCap').textContent = 'of ' + cap + ' volunteer spots filled';
+  $('#volBar').style.width = Math.round(filled / cap * 100) + '%';
+  var selRole = ROLES[0][0];
+  function renderRoles() {
+    $('#roles').innerHTML = ROLES.map(function (r) {
+      return '<button type="button" class="role" data-role="' + esc(r[0]) + '" aria-pressed="' + (selRole === r[0]) + '"><strong>' + esc(r[0]) + '</strong><span>' + esc(r[3]) + '</span><span class="bar"><i style="width:' + Math.round(r[2] / r[1] * 100) + '%"></i></span><small>' + (r[1] - r[2]) + ' spots left</small></button>';
+    }).join('');
+    $('#vRole').innerHTML = ROLES.map(function (r) { return '<option' + (r[0] === selRole ? ' selected' : '') + '>' + esc(r[0]) + '</option>'; }).join('');
+  }
+  $('#roles').addEventListener('click', function (ev) { var b = ev.target.closest('[data-role]'); if (!b) return; selRole = b.dataset.role; renderRoles(); });
+  $('#vRole').addEventListener('change', function (ev) { selRole = ev.target.value; renderRoles(); });
+  renderRoles();
+  $('#volForm').addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var n = $('#vName').value.trim(), c = $('#vCollege').value.trim(), m = $('#vEmail').value.trim(), out = $('#volDone');
+    out.hidden = false;
+    if (!n || !c || !/^\S+@\S+\.\S+$/.test(m)) { out.textContent = 'Add your name, college and a valid email so the team can reach you.'; return; }
+    var id = 'MLN-V-' + (1000 + Math.floor(Math.random() * 9000));
+    out.innerHTML = 'Thanks, ' + esc(n.split(' ')[0]) + '. Your application for <strong>' + esc($('#vRole').value) + '</strong> is saved as <strong>' + id + '</strong>. This is a demo form, so nothing was sent anywhere.';
+  });
+
+  /* ---------- sponsors ---------- */
+  var GL = {
+    ring: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 5a5 5 0 110 10 5 5 0 010-10z"/></svg>',
+    tri: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l10 18H2z"/></svg>',
+    bars: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h4v16H3zM10 8h4v12h-4zM17 2h4v18h-4z"/></svg>',
+    dot: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/></svg>',
+    dia: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l11 11-11 11L1 12z"/></svg>',
+    sq: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"/></svg>'
+  };
+  var TIERS = [
+    ['Title partner', 't1', [['Orbitrail Mobility', 'ring', 'w1']]],
+    ['Presenting partners', 't2', [['Halcyon Cloud', 'tri', 'w4'], ['Sutradhar Studios', 'bars', 'w2'], ['Banyan Brew', 'dot', 'w1']]],
+    ['Associate partners', 't3', [['Lumen & Loom', 'dia', 'w5'], ['Tilak Chai Co.', 'dot', 'w2'], ['Parikrama Travel', 'tri', 'w6'], ['Ekdant Audio', 'bars', 'w3'], ['Nukkad Eats', 'sq', 'w4'], ['Gulmohar Stationers', 'dia', 'w2']]],
+    ['Community partners', 't4', [['Radio Chaupal', 'dot', 'w3'], ['The Quad Gazette', 'sq', 'w2'], ['Zine Collective', 'bars', 'w5'], ['Bicycle Library', 'ring', 'w4'], ['Campus Cats Trust', 'tri', 'w6'], ['Rangmanch Society', 'dia', 'w1']]]
+  ];
+  $('#sponsorTiers').innerHTML = TIERS.map(function (t) {
+    return '<div class="tier"><h3>' + t[0] + '</h3><div class="logos ' + t[1] + '">' + t[2].map(function (s) { return '<div class="lg ' + s[2] + '">' + GL[s[1]] + '<span>' + esc(s[0]) + '</span></div>'; }).join('') + '</div></div>';
+  }).join('');
+  $('#spCopy').addEventListener('click', function () {
+    var b = this, txt = $('#spMail').textContent;
+    function done() { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy email'; }, 1600); }
+    function fallback() { var r = document.createRange(); r.selectNodeContents($('#spMail')); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Selected, press copy'; }
+    try { navigator.clipboard.writeText(txt).then(done, fallback); } catch (e) { fallback(); }
+  });
+
+  /* ---------- hero particles ---------- */
+  (function () {
+    var cv = $('#heroCv'), ctx = cv.getContext('2d'), hero = $('#hero');
+    var W = 0, H = 0, dpr = 1, parts = [], buckets = [], sz = 2, running = false, visible = true, t0 = performance.now();
+    var mouse = { x: -1e4, y: -1e4, down: false };
+    var STOPS = [[0, [255, 159, 28]], [0.42, [228, 0, 124]], [0.72, [122, 92, 255]], [1, [25, 201, 192]]];
+    function colAt(t) {
+      for (var i = 1; i < STOPS.length; i++) {
+        if (t <= STOPS[i][0]) { var a = STOPS[i - 1], b = STOPS[i], k = (t - a[0]) / (b[0] - a[0]); return a[1].map(function (v, j) { return Math.round(v + (b[1][j] - v) * k); }); }
+      }
+      return STOPS[STOPS.length - 1][1];
+    }
+    function build() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = cv.clientWidth; H = cv.clientHeight;
+      if (!W || !H) return;
+      cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+      var o = document.createElement('canvas'); o.width = W; o.height = H;
+      var c = o.getContext('2d'), fam = '800 100px Unbounded, "Arial Black", Impact, sans-serif';
+      c.font = fam; var w100 = c.measureText('MILAN').width || 400;
+      var fs = Math.min(100 * (W * 0.96) / w100, H * 0.84);
+      c.font = fam.replace('100px', fs + 'px'); c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillStyle = '#fff';
+      c.fillText('MILAN', W / 2, H / 2 + fs * 0.04);
+      var step = W < 520 ? 3 : 4, data = c.getImageData(0, 0, W, H).data;
+      sz = Math.max(1.6, step * 0.5);
+      parts = []; buckets = [];
+      for (var i = 0; i < 21; i++) { var col = i === 20 ? [255, 255, 255] : colAt(i / 19); buckets.push({ s: 'rgb(' + col.join(',') + ')', a: [] }); }
+      for (var y = 0; y < H; y += step) {
+        for (var x = 0; x < W; x += step) {
+          if (data[(y * W + x) * 4 + 3] > 128) {
+            var hx = x + (Math.random() - 0.5) * step * 0.6, hy = y + (Math.random() - 0.5) * step * 0.6;
+            var p = { hx: hx, hy: hy, x: reduce ? hx : Math.random() * W, y: reduce ? hy : Math.random() * H, vx: 0, vy: 0, ph: Math.random() * 6.28 };
+            parts.push(p);
+            buckets[Math.random() < 0.05 ? 20 : Math.min(19, Math.floor(hx / W * 20))].a.push(p);
+          }
+        }
+      }
+      draw();
+    }
+    function draw() {
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
+      for (var b = 0; b < buckets.length; b++) { ctx.fillStyle = buckets[b].s; var arr = buckets[b].a; for (var i = 0; i < arr.length; i++) ctx.fillRect(arr[i].x, arr[i].y, sz, sz); }
+    }
+    function frame(now) {
+      if (!running) return;
+      var t = (now - t0) / 1000, R = 110, R2 = R * R, push = mouse.down ? 8 : 2.4;
+      for (var i = 0; i < parts.length; i++) {
+        var p = parts[i], ax = (p.hx - p.x) * 0.05 + Math.sin(t * 1.4 + p.ph) * 0.03, ay = (p.hy - p.y) * 0.05 + Math.cos(t * 1.1 + p.ph) * 0.03;
+        var dx = p.x - mouse.x, dy = p.y - mouse.y, d2 = dx * dx + dy * dy;
+        if (d2 < R2) { var d = Math.sqrt(d2) || 1, f = 1 - d / R, k = f * f * push; ax += dx / d * k; ay += dy / d * k; }
+        p.vx = (p.vx + ax) * 0.86; p.vy = (p.vy + ay) * 0.86; p.x += p.vx; p.y += p.vy;
+      }
+      draw(); requestAnimationFrame(frame);
+    }
+    function start() { if (reduce || running || !visible || document.hidden) return; running = true; requestAnimationFrame(frame); }
+    function stop() { running = false; }
+    function setPointer(e) { var r = cv.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; }
+    hero.addEventListener('pointermove', setPointer);
+    hero.addEventListener('pointerdown', function (e) { setPointer(e); mouse.down = true; });
+    window.addEventListener('pointerup', function () { mouse.down = false; });
+    hero.addEventListener('pointerleave', function () { mouse.x = mouse.y = -1e4; mouse.down = false; });
+    document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (en) { visible = en[0].isIntersecting; visible ? start() : stop(); }).observe(hero);
+    var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { stop(); build(); start(); }, 150); });
+    var ready = (document.fonts && document.fonts.load) ? Promise.race([document.fonts.load('800 100px Unbounded'), new Promise(function (r) { setTimeout(r, 1800); })]) : Promise.resolve();
+    ready.catch(function () {}).then(function () { build(); start(); });
+  })();
+
+  /* ---------- init ---------- */
+  renderFilters(); renderEvents(); renderItinerary(); renderMap(); syncButtons();
+})();
+</script>
+
+</body></html>
